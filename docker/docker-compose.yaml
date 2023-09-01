@@ -11,11 +11,11 @@ services:
       - ../models:/workdir/models
 
     command: >
-      tritonserver
+      bash -c "python3 src/create_sender.py && tritonserver
       --model-repository /workdir/models
       --model-control-mode poll
       --repository-poll-secs 5
-      --log-verbose 1
+      --log-verbose 1"
 
   triton-client:
     build:
