@@ -1,0 +1,30 @@
+version: '2.3'
+
+services:
+  triton-server:
+    build:
+      context: ../
+      dockerfile: ./docker/server.Dockerfile
+    shm_size: '10gb'
+    runtime: nvidia
+    volumes:
+      - ../models:/workdir/models
+
+    command: >
+      tritonserver
+      --model-repository /workdir/models
+      --model-control-mode poll
+      --repository-poll-secs 5
+      --log-verbose 1
+
+  triton-client:
+    build:
+      context: ../
+      dockerfile: ./docker/client.Dockerfile
+    environment:
+      - TRITON_SERVER_URL=triton-server
+      - TRITON_SERVER_PORT=8000
+    ports:
+      - 8888:8888
+
+    command: uvicorn src.send_request_to_triton_server:app --host 0.0.0.0 --port 8888
