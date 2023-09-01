@@ -11,7 +11,7 @@ Git repo to demonstrate triton's buffer behavior.
 ### 2 - Trigger the requests
 
 This will trigger the client to send 200 requests to triton
-`curl http://127.0.0.1:8888/`
+`curl http://0.0.0.0:8888/`
 
 Note that the model is set to wait 2s for its queue to fill-up
 
