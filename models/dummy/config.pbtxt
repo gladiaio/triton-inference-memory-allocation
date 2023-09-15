@@ -1,0 +1,28 @@
+name: "dummy"
+platform: "onnxruntime_onnx"
+max_batch_size: 256
+
+dynamic_batching: {
+    default_queue_policy: {
+        timeout_action: REJECT
+        default_timeout_microseconds: 300000000
+    },
+    max_queue_delay_microseconds: 2000000
+}
+
+input [
+ {
+    name: "dummy_input"
+    data_type: TYPE_FP32
+    dims: [80, 3000]
+  }
+]
+output [
+  {
+    name: "dummy_output"
+    data_type: TYPE_FP32
+    dims: [-1, -1]
+  }
+]
+
+instance_group [{ kind: KIND_GPU , count: 200 }]

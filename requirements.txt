@@ -1,7 +1,5 @@
 requests==2.31.0
-torch==2.0.1
 onnx
 tritonclient==2.31.0
 tritonclient[http]
-uvicorn
-fastapi
+torch==2.0.1

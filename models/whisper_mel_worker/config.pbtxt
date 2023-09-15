@@ -1,0 +1,30 @@
+name: "whisper_mel_worker"
+backend: "python"
+max_batch_size: 1
+dynamic_batching: {
+    default_queue_policy: {
+        timeout_action: REJECT
+        default_timeout_microseconds: 300000000
+    }
+}
+
+input [
+    {
+        name: "audio_input"
+        data_type: TYPE_FP32
+        dims: [-1]
+    }
+]
+output [
+    {
+        name: "mel_output"
+        data_type: TYPE_FP32
+        dims: [80, 3000]
+    }, {
+        name: "content_frames_output"
+        data_type: TYPE_INT32
+        dims: [1]
+  }
+]
+
+instance_group [{ kind: KIND_CPU , count: 1 }]

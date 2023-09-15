@@ -1,0 +1,36 @@
+Tue Sep 19 09:50:28 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.86.05              Driver Version: 535.86.05    CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100S-PCIE-32GB          Off | 00000000:00:06.0 Off |                    0 |
+| N/A   35C    P0              40W / 250W |   7584MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|    0   N/A  N/A      1004      G   /usr/lib/xorg/Xorg                            4MiB |
+|    0   N/A  N/A   2658292      C   tritonserver                                372MiB |
+|    0   N/A  N/A   2659356      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2660527      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2661695      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2662930      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2664289      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2665763      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2667501      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2669252      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2671144      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2673264      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2675539      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2677857      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2680415      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2683051      C   ...s/python/triton_python_backend_stub      480MiB |
+|    0   N/A  N/A   2685798      C   ...s/python/triton_python_backend_stub      480MiB |
++---------------------------------------------------------------------------------------+

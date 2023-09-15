@@ -1,0 +1,5 @@
+pyannote-core==5.0.0
+pyannote-database==5.0.1
+pyannote-metrics==3.2
+pyannote-pipeline==2.3
+git+https://github.com/pyannote/pyannote-audio.git@develop
