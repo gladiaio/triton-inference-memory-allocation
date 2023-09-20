@@ -40,10 +40,12 @@ nvidia-smi -f dummy.ready.gpu
 python scripts/calls.py --test dummy
 nvidia-smi -f dummy.after-test.gpu
 
-# Run for MFCC
-docker compose -f docker/docker-compose.yaml down --remove-orphans
-docker compose -f docker/docker-compose.yaml up --build --detach triton-server-mel
-waituntil 8000
-nvidia-smi -f mel.ready.gpu
-python scripts/calls.py --test mel
-nvidia-smi -f mel.after-test.gpu
+
+# THIS CODE IS NOT YET REPRODUCING OUR PROBLEMS
+# # Run for MFCC
+# docker compose -f docker/docker-compose.yaml down --remove-orphans
+# docker compose -f docker/docker-compose.yaml up --build --detach triton-server-mel
+# waituntil 8000
+# nvidia-smi -f mel.ready.gpu
+# python scripts/calls.py --test mel
+# nvidia-smi -f mel.after-test.gpu

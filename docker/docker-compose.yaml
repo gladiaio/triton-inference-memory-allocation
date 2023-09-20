@@ -49,3 +49,5 @@ services:
       --model-control-mode=explicit
       --model-repository /models
       --load-model=whisper_mel_worker
+      --load-model=large_v2_whisper_encoder
+      --load-model=mel_ensemble
